@@ -29,6 +29,7 @@ public class HabitacioFosca extends Habitacio {
         }
     }
 
+    @Override
     public void utilitzarItem(Item item){
         if(item.getNom().equals("Llanterna")){
             this.illuminada = true;
@@ -39,4 +40,3 @@ public class HabitacioFosca extends Habitacio {
         }
     }
 }
-<

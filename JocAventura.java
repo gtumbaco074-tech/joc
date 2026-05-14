@@ -92,13 +92,12 @@ public class JocAventura {
                 break;
             case "usar":
                 if (parts.length > 1) {
-                    String nomItem = parts[1];
-                    HabitacioActual = jugador.getPosicioActual();
-                    Item item = jugador.buscarItem(nomItem);
-                    HabitacioActual.utilitzarItem(item);
-
-                } else {
-                    System.out.println("Què vols usar?");
+                    Item item = jugador.buscarItem(parts[1]);
+                    if (item != null) {
+                        jugador.getPosicioActual().utilitzarItem(item);
+                    } else {
+                        System.out.println("No tens aquest objecte.");
+                    }
                 }
                 break;
 
